@@ -1,9 +1,5 @@
 import fire
-
-
-class Integral:
-    def integral(self, step: int = 1):
-        return step
+from integral.common import Integral
 
 
 class CalcMath:
