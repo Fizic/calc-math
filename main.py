@@ -3,8 +3,11 @@ from integral.common import Integral
 
 
 class CalcMath:
-    def __init__(self):
-        self.integral = Integral()
+    """
+    An ultimate tool for solving computational mathematics problems
+    """
+    def __init__(self, **kwargs):
+        self.integral = Integral(**kwargs)
 
 
 if __name__ == '__main__':
