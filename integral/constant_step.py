@@ -13,7 +13,7 @@ class ConstantStep:
 
     def __init__(self, lower_limit: int = None,
                  upper_limit: int = None,
-                 number_of_partitions: int = None):
+                 number_of_partitions: int = None, **kwargs):
         """
         :param lower_limit: Lower limit of integration
         :param upper_limit: Upper limit of integration
