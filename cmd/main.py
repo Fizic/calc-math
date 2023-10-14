@@ -1,13 +1,15 @@
 import fire
-from integral.common import Integral
+
+from cmd.integral.common import IntegralCmd
 
 
 class CalcMath:
     """
     An ultimate tool for solving computational mathematics problems
     """
+
     def __init__(self, **kwargs):
-        self.integral = Integral(**kwargs)
+        self.integral = IntegralCmd(**kwargs)
 
 
 if __name__ == '__main__':
