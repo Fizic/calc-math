@@ -1,7 +1,7 @@
-from calculations.integral.common import Integral
-from calculations.integral.variable_step import VariableStepIntegralSolver
-from cmd.base import BaseCmd
-from export.excel.export_results import update_data
+from app.calculations import Integral
+from app.calculations.integral.variable_step import VariableStepIntegralSolver
+from app.cmd.base import BaseCmd
+from app.export.excel.export_results import update_data
 
 
 def func_x(x):

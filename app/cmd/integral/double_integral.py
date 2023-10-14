@@ -1,7 +1,7 @@
 from math import sin
 
-from calculations.integral.double_integral import DoubleIntegral, DoubleIntegralSolver
-from cmd.base import BaseCmd
+from app.calculations import DoubleIntegral, DoubleIntegralSolver
+from app.cmd.base import BaseCmd
 
 
 def func_xy(x, y):
