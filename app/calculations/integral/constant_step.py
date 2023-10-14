@@ -1,4 +1,4 @@
-from calculations.integral.common import Integral
+from app.calculations.integral.common import Integral
 
 
 class ConstantStepIntegralSolver:

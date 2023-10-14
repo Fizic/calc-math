@@ -1,5 +1,5 @@
-from calculations.integral.common import Integral
-from calculations.integral.constant_step import ConstantStepIntegralSolver
+from app.calculations.integral.common import Integral
+from app.calculations.integral.constant_step import ConstantStepIntegralSolver
 
 
 class VariableStepIntegralSolver:

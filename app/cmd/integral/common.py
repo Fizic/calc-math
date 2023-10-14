@@ -1,6 +1,6 @@
-from cmd.integral.constant_step import ConstantStepCmd
-from cmd.integral.double_integral import DoubleIntegralCmd
-from cmd.integral.variable_step import VariableStepCmd
+from app.cmd.integral.constant_step import ConstantStepCmd
+from app.cmd.integral.double_integral import DoubleIntegralCmd
+from app.cmd.integral.variable_step import VariableStepCmd
 
 
 class IntegralCmd:

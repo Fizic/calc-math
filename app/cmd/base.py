@@ -1,6 +1,6 @@
 from typing import Any
 
-from export.excel.export_results import update_data
+from app.export.excel.export_results import update_data
 
 
 class BaseCmd:

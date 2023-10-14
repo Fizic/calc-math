@@ -1,6 +1,6 @@
 import fire
 
-from cmd.integral.common import IntegralCmd
+from app.cmd.integral.common import IntegralCmd
 
 
 class CalcMath:

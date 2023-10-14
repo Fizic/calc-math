@@ -1,6 +1,6 @@
-from calculations.integral.common import Integral
-from calculations.integral.constant_step import ConstantStepIntegralSolver
-from cmd.base import BaseCmd
+from app.calculations import Integral
+from app.calculations.integral.constant_step import ConstantStepIntegralSolver
+from app.cmd.base import BaseCmd
 
 
 def func_x(x):
