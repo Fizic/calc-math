@@ -1,4 +1,4 @@
-from app.calculations import Integral
+from app.calculations.integral.constant_step import Integral
 from app.calculations.integral.constant_step import ConstantStepIntegralSolver
 from app.cmd.base import BaseCmd
 
