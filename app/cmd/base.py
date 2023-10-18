@@ -20,7 +20,7 @@ class BaseCmd:
         return params
 
     def _finish(self):
-        print("Ответ: ", self.answer)
+        print("Ответ:", self.answer)
         update_data(self.type_of_calculations, self.method, **self._get_vars())
 
     def _get_vars(self):

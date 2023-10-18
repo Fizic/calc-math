@@ -34,13 +34,13 @@ class VariableStepCmd(BaseCmd):
         )
 
     def _finish(self):
-        print("Ответ: ", self.answer, self.step_length)
+        print("Ответ:", self.answer, "длина шага:", self.step_length)
         update_data(self.type_of_calculations, self.method, **self._get_vars())
 
     def slow_option(self):
         self.__start()
         self.method = 'slow_option'
-        self.answer = self._variable_step_integral_solver.slow_option(self._integral)
+        self.answer, self.step_length = self._variable_step_integral_solver.slow_option(self._integral)
         self._finish()
 
     def fast_option(self):
