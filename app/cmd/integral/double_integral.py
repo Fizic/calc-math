@@ -1,6 +1,6 @@
 from math import sin
 
-from app.calculations import DoubleIntegral, DoubleIntegralSolver
+from app.calculations.integral.double_integral import DoubleIntegral, DoubleIntegralSolver
 from app.cmd.base import BaseCmd
 
 

@@ -1,4 +1,4 @@
-from app.calculations import Integral
+from app.cmd.integral.constant_step import Integral
 from app.calculations.integral.variable_step import VariableStepIntegralSolver
 from app.cmd.base import BaseCmd
 from app.export.excel.export_results import update_data
