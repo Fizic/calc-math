@@ -34,7 +34,7 @@ class VariableStepIntegralSolver:
         b = 0
         while r > self.precision:
             x = integral.lower_limit + b
-            while x <= (integral.upper_limit - h):
+            while x < integral.upper_limit:
                 sumint = sumint + integral.function(x)
                 x = x + hv
             previous_integral_value = sumint * h
