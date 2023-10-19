@@ -43,4 +43,4 @@ class VariableStepIntegralSolver:
             hv = h
             h = h / 2
             b = h
-        return previous_integral_value, 2 * hv
+        return previous_integral_value, hv
