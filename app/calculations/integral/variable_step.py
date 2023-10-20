@@ -2,6 +2,14 @@ from app.calculations.integral.common import Integral
 from app.calculations.integral.constant_step import ConstantStepIntegralSolver
 
 
+def convert_precision(tolerance):
+    order = 0
+    while tolerance != 1:
+        tolerance = tolerance * 10
+        order += 1
+    return order
+
+
 class VariableStepIntegralSolver:
     def __init__(self, precision: float, number_of_partitions: int = 100):
         self.precision = precision
@@ -21,7 +29,7 @@ class VariableStepIntegralSolver:
             current_precision = abs(current_integral_value - previous_integral_value)
 
         step_length = (integral.upper_limit - integral.lower_limit) / self.number_of_partitions
-
+        current_integral_value = round(current_integral_value, convert_precision(self.precision))
         return current_integral_value, step_length
 
     def fast_option(self, integral):
@@ -43,4 +51,5 @@ class VariableStepIntegralSolver:
             hv = h
             h = h / 2
             b = h
+        previous_integral_value = round(previous_integral_value, convert_precision(self.precision))
         return previous_integral_value, hv
