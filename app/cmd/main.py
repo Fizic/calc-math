@@ -1,6 +1,7 @@
 import fire
 
 from app.cmd.integral.common import IntegralCmd
+from app.cmd.differential_equations.common import DifferentialEquationsCmd
 
 
 class CalcMath:
@@ -10,6 +11,7 @@ class CalcMath:
 
     def __init__(self, **kwargs):
         self.integral = IntegralCmd(**kwargs)
+        self.differential_equations = DifferentialEquationsCmd(**kwargs)
 
 
 if __name__ == '__main__':

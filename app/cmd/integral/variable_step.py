@@ -9,6 +9,10 @@ def func_x(x):
 
 
 class VariableStepCmd(BaseCmd):
+    """
+    Вычисление определенного интеграла двойным пересчетом
+    с помощью метода левых частей
+    """
     def __init__(
             self,
             lower_limit: int = None,
@@ -38,12 +42,18 @@ class VariableStepCmd(BaseCmd):
         update_data(self.type_of_calculations, self.method, **self._get_vars())
 
     def slow_option(self):
+        """
+        Вариант двойного пересчёта с повторяющимся накоплением суммы
+        """
         self.__start()
         self.method = 'slow_option'
         self.answer, self.step_length = self._variable_step_integral_solver.slow_option(self._integral)
         self._finish()
 
     def fast_option(self):
+        """
+        Вариант вычисления двойным пересчётом с единственным накоплением суммы
+        """
         self.__start()
         self.method = 'fast_option'
         self.answer, self.step_length = self._variable_step_integral_solver.fast_option(self._integral)

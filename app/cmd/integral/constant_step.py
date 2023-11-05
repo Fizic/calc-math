@@ -8,6 +8,9 @@ def func_x(x):
 
 
 class ConstantStepCmd(BaseCmd):
+    """
+    Вычисление интегралов с постоянным шагом
+    """
     def __init__(self, lower_limit: int = None, upper_limit: int = None, number_of_partitions: int = None, **kwargs):
         self.lower_limit = lower_limit
         self.upper_limit = upper_limit
@@ -22,6 +25,9 @@ class ConstantStepCmd(BaseCmd):
         self._constant_step_integral_solver = ConstantStepIntegralSolver(self.number_of_partitions)
 
     def left_rectangles(self):
+        """
+        Метод левых частей
+        """
         self.__start()
         self.method = 'left_rectangles'
         self.answer = self._constant_step_integral_solver.left_rectangles(self._integral)
@@ -29,8 +35,7 @@ class ConstantStepCmd(BaseCmd):
 
     def right_rectangles(self):
         """
-        The method of right rectangles
-        :return:
+        Метод правых частей
         """
         self.__start()
         self.method = 'right_rectangles'
@@ -39,8 +44,7 @@ class ConstantStepCmd(BaseCmd):
 
     def trapezoid(self):
         """
-        The method of trapezoid
-        :return:
+        Метод трапеции
         """
         self.__start()
         self.method = 'trapezoid'
@@ -49,8 +53,7 @@ class ConstantStepCmd(BaseCmd):
 
     def parabola(self):
         """
-        The method of trapezoid
-        :return:
+        Метод параболы
         """
         self.__start()
         self.method = 'parabola'

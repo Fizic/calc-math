@@ -5,7 +5,7 @@ from app.cmd.integral.variable_step import VariableStepCmd
 
 class IntegralCmd:
     """
-    Calculation of integrals by various methods
+    Вычисление определенных интегралов различными методами
     """
 
     def __init__(self, **kwargs):

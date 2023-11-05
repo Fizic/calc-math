@@ -9,6 +9,9 @@ def func_xy(x, y):
 
 
 class DoubleIntegralCmd(BaseCmd):
+    """
+    Вычисление кратного интеграла
+    """
     def __init__(
             self,
             lower_limit_x: int = None,
