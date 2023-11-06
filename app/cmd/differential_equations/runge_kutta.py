@@ -1,5 +1,5 @@
 from app.calculations.differential_equations.common import DifferentialEquations
-from app.calculations.differential_equations.Euler import euler
+from app.calculations.differential_equations.runge_kutta import runge_kutta
 from app.cmd.base import BaseCmd
 
 
@@ -7,9 +7,9 @@ def func_der_y(x, y):
     return y * (1 - x)
 
 
-class EulerCmd(BaseCmd):
+class RungeKuttaCmd(BaseCmd):
     """
-    Вычисление дифференциальных уравнений методом Эйлера
+    Метод Рунге-Кутта
     """
     def __init__(self, partitions: int = None, x_begin: int = None, x_end: int = None, y_begin: int = None, **kwargs):
         self.partitions = partitions
@@ -25,11 +25,11 @@ class EulerCmd(BaseCmd):
         self._differential_equations = DifferentialEquations(self.partitions, self.x_begin, self.x_end, self.y_begin,
                                                              func_der_y)
 
-    def euler(self):
+    def __call__(self):
         """
         Метод Эйлера
         """
         self.__start()
-        self.method = 'method_euler'
-        self.answer = euler(self._differential_equations)
+        self.method = 'method_runge_kutta'
+        self.answer = runge_kutta(self._differential_equations)
         self._finish()

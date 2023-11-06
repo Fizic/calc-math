@@ -1,5 +1,5 @@
-from app.cmd.differential_equations.Euler import EulerCmd
-from app.cmd.differential_equations.Runge_Kutta import RungeKuttaCmd
+from app.cmd.differential_equations.euler import EulerCmd
+from app.cmd.differential_equations.runge_kutta import RungeKuttaCmd
 
 
 class DifferentialEquationsCmd:
