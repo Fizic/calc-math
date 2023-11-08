@@ -1,6 +1,7 @@
 from app.calculations.differential_equations.common import DifferentialEquations
 from app.calculations.differential_equations.runge_kutta import runge_kutta
 from app.cmd.base import BaseCmd
+from app.export.charts.charts import create_chart
 
 
 def func_der_y(x, y):
@@ -17,7 +18,7 @@ class RungeKuttaCmd(BaseCmd):
         self.x_end = x_end
         self.y_begin = y_begin
 
-        self.type_of_calculations = 'differential_equations_euler'
+        self.type_of_calculations = 'differential_equations_runge_kutta'
         self.method = ''
 
     def __start(self):
@@ -27,9 +28,11 @@ class RungeKuttaCmd(BaseCmd):
 
     def __call__(self):
         """
-        Метод Эйлера
+        Метод Рунге Кутта
         """
         self.__start()
         self.method = 'method_runge_kutta'
-        self.answer = runge_kutta(self._differential_equations)
+        xs, ys = runge_kutta(self._differential_equations)
+        create_chart(xs, ys)
+        self.answer = ys[-1]
         self._finish()

@@ -1,6 +1,7 @@
 from app.calculations.differential_equations.common import DifferentialEquations
 from app.calculations.differential_equations.euler import euler
 from app.cmd.base import BaseCmd
+from app.export.charts.charts import create_chart
 
 
 def func_der_y(x, y):
@@ -31,5 +32,7 @@ class EulerCmd(BaseCmd):
         """
         self.__start()
         self.method = 'method_euler'
-        self.answer = euler(self._differential_equations)
+        xs, ys = euler(self._differential_equations)
+        create_chart(xs, ys)
+        self.answer = ys[-1]
         self._finish()
