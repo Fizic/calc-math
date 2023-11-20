@@ -12,15 +12,16 @@ class DoubleIntegralCmd(BaseCmd):
     """
     Вычисление кратного интеграла
     """
+
     def __init__(
-            self,
-            lower_limit_x: int = None,
-            upper_limit_x: int = None,
-            number_of_partitions_x: int = None,
-            lower_limit_y: int = None,
-            upper_limit_y: int = None,
-            number_of_partitions_y: int = None,
-            **kwargs
+        self,
+        lower_limit_x: int = None,
+        upper_limit_x: int = None,
+        number_of_partitions_x: int = None,
+        lower_limit_y: int = None,
+        upper_limit_y: int = None,
+        number_of_partitions_y: int = None,
+        **kwargs
     ):
         self.lower_limit_x = lower_limit_x
         self.upper_limit_x = upper_limit_x
@@ -35,16 +36,9 @@ class DoubleIntegralCmd(BaseCmd):
     def __start(self):
         super().__init__()
         self._double_integral = DoubleIntegral(
-            self.lower_limit_x,
-            self.upper_limit_x,
-            self.lower_limit_y,
-            self.upper_limit_y,
-            func_xy
+            self.lower_limit_x, self.upper_limit_x, self.lower_limit_y, self.upper_limit_y, func_xy
         )
-        self._double_integral_solver = DoubleIntegralSolver(
-            self.number_of_partitions_x,
-            self.number_of_partitions_y
-        )
+        self._double_integral_solver = DoubleIntegralSolver(self.number_of_partitions_x, self.number_of_partitions_y)
 
     def __call__(self):
         self.__start()

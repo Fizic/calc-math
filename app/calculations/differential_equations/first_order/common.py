@@ -1,4 +1,4 @@
-class DifferentialEquations:
+class DifferentialEquation:
     def __init__(self, partitions: int, x_begin: int, x_end: int, y_begin: int, function):
         self.partitions = partitions
         self.x_begin = x_begin

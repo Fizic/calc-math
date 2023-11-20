@@ -11,6 +11,7 @@ class ConstantStepCmd(BaseCmd):
     """
     Вычисление интегралов с постоянным шагом
     """
+
     def __init__(self, lower_limit: int = None, upper_limit: int = None, number_of_partitions: int = None, **kwargs):
         self.lower_limit = lower_limit
         self.upper_limit = upper_limit

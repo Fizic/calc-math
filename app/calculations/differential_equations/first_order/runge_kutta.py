@@ -1,7 +1,7 @@
-from app.calculations.differential_equations.common import DifferentialEquations
+from app.calculations.differential_equations.first_order.common import DifferentialEquation
 
 
-def runge_kutta(differ: DifferentialEquations):
+def runge_kutta(differ: DifferentialEquation):
     step_length = (differ.x_end - differ.x_begin) / differ.partitions
     y = differ.y_begin
     x = differ.x_begin
@@ -17,5 +17,3 @@ def runge_kutta(differ: DifferentialEquations):
         xs.append(x)
         ys.append(y)
     return xs, ys
-
-

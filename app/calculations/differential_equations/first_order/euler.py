@@ -1,7 +1,7 @@
-from app.calculations.differential_equations.common import DifferentialEquations
+from app.calculations.differential_equations.first_order.common import DifferentialEquation
 
 
-def euler(differ: DifferentialEquations):
+def euler(differ: DifferentialEquation):
     step_length = (differ.x_end - differ.x_begin) / differ.partitions
     y = differ.y_begin
     x = differ.x_begin

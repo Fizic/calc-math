@@ -13,13 +13,14 @@ class VariableStepCmd(BaseCmd):
     Вычисление определенного интеграла двойным пересчетом
     с помощью метода левых частей
     """
+
     def __init__(
-            self,
-            lower_limit: int = None,
-            upper_limit: int = None,
-            number_of_partitions: int = None,
-            precision: float = None,
-            **kwargs
+        self,
+        lower_limit: int = None,
+        upper_limit: int = None,
+        number_of_partitions: int = None,
+        precision: float = None,
+        **kwargs
     ):
         self.lower_limit = lower_limit
         self.upper_limit = upper_limit
@@ -33,8 +34,7 @@ class VariableStepCmd(BaseCmd):
         super().__init__()
         self._integral = Integral(self.lower_limit, self.upper_limit, func_x)
         self._variable_step_integral_solver = VariableStepIntegralSolver(
-            self.precision,
-            number_of_partitions=self.number_of_partitions
+            self.precision, number_of_partitions=self.number_of_partitions
         )
 
     def _finish(self):
