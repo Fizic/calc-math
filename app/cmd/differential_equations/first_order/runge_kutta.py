@@ -1,4 +1,4 @@
-from app.calculations.differential_equations.first_order import runge_kutta
+from app.calculations.differential_equations.first_order.runge_kutta import runge_kutta
 from app.calculations.differential_equations.first_order.common import DifferentialEquation
 from app.export.charts.charts import create_chart
 from app.export.excel.differential_equations.excel_exporter import DifferentialEquationsExcelExporter
@@ -30,7 +30,7 @@ class RungeKuttaCmd:
 
     def _finish(self, xs, ys):
         deee = DifferentialEquationsExcelExporter()
-        deee.create_columns(2, x_begin=self.x_begin, x_end=self.x_end, y_begin=self.y_begin)
+        deee.create_columns(2, x_begin=self.x_begin, x_end=self.x_end, y_begin=self.y_begin, method="Метод Рунге Кутта")
 
         print("Ответ: ")
         print("x\ty")

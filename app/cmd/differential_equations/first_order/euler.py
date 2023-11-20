@@ -31,7 +31,7 @@ class EulerCmd:
 
     def _finish(self, xs, ys):
         deee = DifferentialEquationsExcelExporter()
-        deee.create_columns(2, x_begin=self.x_begin, x_end=self.x_end, y_begin=self.y_begin)
+        deee.create_columns(2, x_begin=self.x_begin, x_end=self.x_end, y_begin=self.y_begin, method="Метод Эйлера")
 
         print("Ответ: ")
         print("x\ty")
