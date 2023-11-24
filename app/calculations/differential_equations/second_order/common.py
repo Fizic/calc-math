@@ -18,7 +18,7 @@ class SecondOrderDifferentialEquation:
 
 class SecondOrderDifferentialEquationSolver:
     def __init__(self):
-        self.h = 0.1
+        self.h = 0.05
 
     def euler(self, differ: SecondOrderDifferentialEquation):
         x = differ.x_begin
