@@ -1,6 +1,7 @@
 from app.cmd.differential_equations.first_order.euler import EulerCmd
 from app.cmd.differential_equations.first_order.runge_kutta import RungeKuttaCmd
 from app.cmd.differential_equations.second_order.common import SecondOrderDifferentialEquationsCmd
+from app.cmd.differential_equations.system.common import SystemOfDifferentialEquationsCmd
 
 
 class DifferentialEquationsCmd:
@@ -12,3 +13,4 @@ class DifferentialEquationsCmd:
         self.euler = EulerCmd(**kwargs)
         self.runge_kutta = RungeKuttaCmd(**kwargs)
         self.second_order = SecondOrderDifferentialEquationsCmd(**kwargs)
+        self.system = SystemOfDifferentialEquationsCmd(**kwargs)

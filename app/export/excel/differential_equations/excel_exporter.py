@@ -23,17 +23,21 @@ class DifferentialEquationsExcelExporter:
             self.data[key].append(value)
         self.data["x"] = [None]
         self.data["y"] = [None]
-        if count == 3:
+        if count >= 3:
             self.data["z"] = [None]
+        if count >= 4:
+            self.data["t"] = [None]
 
-    def add_line(self, x, y, z=None):
+    def add_line(self, x, y, z=None, t=None):
         self.data["x"].append(x)
         self.data["y"].append(y)
         if z is not None:
             self.data["z"].append(z)
+        if t is not None:
+            self.data["t"].append(t)
 
         for key in self.data.keys():
-            if key in ["x", "y", "z"]:
+            if key in ["x", "y", "z", "t"]:
                 continue
             self.data[key].append(None)
 

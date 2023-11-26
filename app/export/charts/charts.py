@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
 
 
-def create_chart(x, y):
-    plt.plot(x, y, marker='o')
+def create_chart(x, y, z):
+    plt.plot(x, y, marker='o', label="y")
+    plt.plot(x, z, marker='o', label="z")
+    plt.legend()
     plt.xlabel('x')
-    plt.ylabel('y')
-    plt.title('Первый график')
     plt.grid()
     plt.show()

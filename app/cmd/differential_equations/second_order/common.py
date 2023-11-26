@@ -11,7 +11,7 @@ class SecondOrderDifferentialEquationsCmd:
     ДУ
     """
 
-    def __init__(self, x_begin: float, x_end: float, y_begin: float, z_begin: float = None, **kwargs):
+    def __init__(self, x_begin: float, x_end: float = None, y_begin: float = None, z_begin: float = None, **kwargs):
         self.x_begin = x_begin
         self.x_end = x_end
         self.y_begin = y_begin
@@ -37,7 +37,7 @@ class SecondOrderDifferentialEquationsCmd:
             deee.add_line(x, y, z)
 
         deee.save()
-        create_chart(xs, zs)
+        create_chart(xs, ys, zs, xs)
 
     def euler(self):
         self.__start()
