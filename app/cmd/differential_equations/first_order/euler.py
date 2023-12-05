@@ -9,7 +9,7 @@ def func_der_y(x, y):
     return y * (1 - x)
 
 
-class EulerCmd:
+class EulerCmd(BaseCmd):
     """
     Вычисление дифференциальных уравнений методом Эйлера
     """

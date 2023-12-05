@@ -13,8 +13,8 @@ class SystemOfDifferentialEquationsCmd:
 
     def __init__(
         self,
-        x_begin: float,
-        y_begin: float,
+        x_begin: float = None,
+        y_begin: float = None,
         z_begin: float = None,
         t_begin: float = None,
         t_end: float = None,

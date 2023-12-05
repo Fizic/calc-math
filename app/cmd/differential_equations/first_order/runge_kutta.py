@@ -1,5 +1,6 @@
 from app.calculations.differential_equations.first_order.runge_kutta import runge_kutta
 from app.calculations.differential_equations.first_order.common import DifferentialEquation
+from app.cmd.base import BaseCmd
 from app.export.charts.charts import create_chart
 from app.export.excel.differential_equations.excel_exporter import DifferentialEquationsExcelExporter
 
@@ -8,7 +9,7 @@ def func_der_y(x, y):
     return y * (1 - x)
 
 
-class RungeKuttaCmd:
+class RungeKuttaCmd(BaseCmd):
     """
     Метод Рунге-Кутта
     """

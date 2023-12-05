@@ -2,16 +2,17 @@ from app.calculations.differential_equations.second_order.common import (
     SecondOrderDifferentialEquation,
     SecondOrderDifferentialEquationSolver,
 )
+from app.cmd.base import BaseCmd
 from app.export.charts.charts import create_chart_with_z
 from app.export.excel.differential_equations.excel_exporter import DifferentialEquationsExcelExporter
 
 
-class SecondOrderDifferentialEquationsCmd:
+class SecondOrderDifferentialEquationsCmd(BaseCmd):
     """
     ДУ
     """
 
-    def __init__(self, x_begin: float, x_end: float = None, y_begin: float = None, z_begin: float = None, **kwargs):
+    def __init__(self, x_begin: float = None, x_end: float = None, y_begin: float = None, z_begin: float = None, **kwargs):
         self.x_begin = x_begin
         self.x_end = x_end
         self.y_begin = y_begin
