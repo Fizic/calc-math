@@ -2,7 +2,7 @@ from app.calculations.differential_equations.second_order.common import (
     SecondOrderDifferentialEquation,
     SecondOrderDifferentialEquationSolver,
 )
-from app.export.charts.charts import create_chart
+from app.export.charts.charts import create_chart_with_z
 from app.export.excel.differential_equations.excel_exporter import DifferentialEquationsExcelExporter
 
 
@@ -37,7 +37,7 @@ class SecondOrderDifferentialEquationsCmd:
             deee.add_line(x, y, z)
 
         deee.save()
-        create_chart(xs, ys, zs, xs)
+        create_chart_with_z(xs, ys, zs)
 
     def euler(self):
         self.__start()

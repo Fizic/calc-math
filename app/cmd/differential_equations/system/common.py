@@ -2,7 +2,7 @@ from app.calculations.differential_equations.system.common import (
     DifferentialEquationSystem,
     DifferentialEquationSystemSolver,
 )
-from app.export.charts.charts import create_chart
+from app.export.charts.charts import create_chart_with_z
 from app.export.excel.differential_equations.excel_exporter import DifferentialEquationsExcelExporter
 
 
@@ -46,7 +46,7 @@ class SystemOfDifferentialEquationsCmd:
             deee.add_line(x, y, z, t)
 
         deee.save()
-        create_chart(xs, ys, zs)
+        create_chart_with_z(xs, ys, zs)
 
     def euler(self):
         self.__start()
