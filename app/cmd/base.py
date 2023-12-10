@@ -25,6 +25,8 @@ class BaseCmd:
 
     def _get_vars(self):
         params = {key: value for key, value in vars(self).items() if not key.startswith('_')}
-        params.pop('type_of_calculations')
-        params.pop('method')
+        if 'type_of_calculations' in params:
+            params.pop('type_of_calculations')
+        if 'method' in params:
+            params.pop('method')
         return params
