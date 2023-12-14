@@ -23,7 +23,11 @@ class ChebyshevSolver:
         arr = [1.000000002, -0.166666589, 0.008333075, -0.000198107, 0.000002608]
         accuracy = 6e-9
         c = 0
-        p = 1/self.x
+        if self.x == 0:
+            answer = 0
+            return answer
+        else:
+            p = 1/self.x
         k = 0
         u = 1000
         while abs(u) > accuracy:
