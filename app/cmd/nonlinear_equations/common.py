@@ -19,6 +19,9 @@ def F(x: float):
 
 
 class NonlinearEquationsCmd(BaseCmd):
+    """
+    Решение нелинейных уравнений
+    """
     def __init__(self, accuracy: float = None, **kwargs):
         self.accuracy = accuracy
 
