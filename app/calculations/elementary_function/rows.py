@@ -4,7 +4,6 @@ class RowsSolver:
         self.accuracy = accuracy
 
     def rows(self):
-        self.x = 0.5
         u = 1
         s = 1
         k = 1
